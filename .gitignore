@@ -12,3 +12,6 @@
 !template_shared_files/*
 
 !start.py
+!base.sh
+!rbenv.sh
+!rubymn.sh
