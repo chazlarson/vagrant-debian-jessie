@@ -10,3 +10,5 @@
 
 !template_shared_files
 !template_shared_files/*
+
+!start.py
