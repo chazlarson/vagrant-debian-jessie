@@ -1,0 +1,9 @@
+# All files and directories are ignored
+*
+
+# EXCEPT for the ones listed after the "!" below
+
+!.gitignore
+
+!template_files
+!template_files/*

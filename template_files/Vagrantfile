@@ -1,0 +1,10 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "<BOX_NAME>"
+  config.vm.synced_folder "shared", "/home/vagrant/shared"
+  config.vm.boot_timeout = 600
+  config.vm.network :forwarded_port, guest: <PORT_GEN_GUEST>, host: <PORT_GEN_HOST>
+  config.vm.network :forwarded_port, guest: <PORT_RAILS_GUEST>, host: <PORT_RAILS_HOST>
+  config.vm.network :forwarded_port, guest: <PORT_PG_GUEST>, host: <PORT_PG_HOST>
+end
