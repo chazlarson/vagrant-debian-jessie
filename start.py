@@ -11,7 +11,7 @@ owner = 'jhsu802701'
 hash_port_host = {'general':'8080', 'rails':'3000', 'pg':'15432'}
 
 # If necessary, change the host port numbers
-if abbrev == 'base':
+if abbrev == 'min':
   hash_port_host = {'general':'8079', 'rails':'2999', 'pg':'15431'}
 elif abbrev == 'rbenv-rubymn':
   hash_port_host = {'general':'8081', 'rails':'3001', 'pg':'15433'}
@@ -43,7 +43,7 @@ if not os.path.exists(abbrev):
   # Parameters to fill in
   config_vm_box = "%s/%s-%s" %(owner, distro, abbrev)
   local_box = "vagrant-%s-%s.box" %(distro, abbrev)
-  if abbrev == 'base':
+  if abbrev == 'min':
     config_vm_box = "%s/%s" %(owner, distro)
     local_box = "vagrant-%s.box" %(distro)
   port_g = hash_port_host['general']
@@ -64,13 +64,13 @@ if not os.path.exists(abbrev):
   replace_string_in_file("%s/shared/test_sq.sh" %abbrev, '<PORT_RAILS_HOST>', port_r)
   
   # Remove irrelevant files; rename the info-*.sh file to info.sh
-  if abbrev == 'base':
+  if abbrev == 'min':
     os.remove("%s/shared/test_pg.sh" %abbrev)
     os.remove("%s/shared/test_sq.sh" %abbrev)
     os.remove("%s/shared/info-rbenv.sh" %abbrev)
-    os.rename("%s/shared/info-base.sh" %abbrev, "%s/shared/info.sh" %abbrev)
+    os.rename("%s/shared/info-min.sh" %abbrev, "%s/shared/info.sh" %abbrev)
   else:
-    os.remove("%s/shared/info-base.sh" %abbrev)
+    os.remove("%s/shared/info-min.sh" %abbrev)
     os.rename("%s/shared/info-rbenv.sh" %abbrev, "%s/shared/info.sh" %abbrev)
   
   # Update the shared/info.sh file  

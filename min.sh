@@ -1,5 +1,5 @@
 #!/bin/bash
 
-abbrev='base'
+abbrev='min'
 
 python start.py $abbrev
