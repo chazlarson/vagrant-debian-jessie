@@ -58,6 +58,11 @@ I used Ruby on Rails in VirtualBox before I learned how to use Vagrant.  While t
 *  rbenv is faster than RVM.
 *  The rbenv-communal-gems feature saves time and disk space by allowing multiple versions of Ruby to share the same gems.  When you install a gem in under one version of Ruby, it's available to certain other versions of Ruby as well.
 
+### Why do you have special Vagrant boxes for specific projects?
+
+*  Installing a version of Rails takes a long time.  Installing a version of Ruby takes a long time.  Installing every version of Ruby and every version of Rails in each version of Ruby would take an unreasonably long time, and the time needed to build a Vagrant box would be measured in days or weeks instead of hours.  Thus, there is a limit to the number of versions of Ruby I can include in a general purpose Vagrant box.
+*  The project-specific boxes include the current versions of Ruby and Rails plus the versions that the project is most likely to upgrade to.  Using a special custom box with the appropriate versions of Ruby and Rails pre-installed allows me to quickly get up to speed when I destroy and rebuild the box WITHOUT arguing with other team members over which versions of Ruby and Rails to require.
+
 ### What process do you use to create your Vagrant base boxes?
 
 I use a tool called Packer to create my Vagrant base boxes.  The source code I use for creating my Debian base boxes is available at https://github.com/jhsu802701/packer-debian-jessie .

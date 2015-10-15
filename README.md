@@ -1,4 +1,4 @@
-# Vagrant Boxes
+# Vagrant Boxes - Debian Jessie
 
 This repository makes it easy to get started with Vagrant and Ruby on Rails and allows you to run multiple Vagrant boxes simultaneously.  All Vagrant boxes used here are based on Debian Jessie, which is Debian's current stable branch.  Debian Stable is lighter, faster, and lower maintenance than Ubuntu.  When you boot up any of the Vagrant boxes featured here, you have an up-to-date system.  The boxes designed for Ruby on Rails come with it pre-installed.
 
