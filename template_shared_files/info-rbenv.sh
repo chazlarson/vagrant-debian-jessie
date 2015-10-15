@@ -38,10 +38,13 @@ echo
 redis-server -v
 
 echo
-echo "Version of SQLite:"
+echo 'Version of SQLite:'
 sqlite3 -version
 
 echo
 psql --version
 
 echo
+echo 'PORT NUMBERS TO USE IN THE HOST'
+echo 'Rails: <PORT_RAILS_HOST>'
+echo 'PostgreSQL: <PORT_PG_HOST>'

@@ -13,7 +13,7 @@ hash_port_host = {'general':'8080', 'rails':'3000', 'pg':'15432'}
 # If necessary, change the host port numbers
 if abbrev == 'base':
   hash_port_host = {'general':'8079', 'rails':'2999', 'pg':'15431'}
-elif abbrev == 'ruby_mn':
+elif abbrev == 'rbenv-rubymn':
   hash_port_host = {'general':'8081', 'rails':'3001', 'pg':'15433'}
 
 def message_end(box_str_local):
