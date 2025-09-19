@@ -18,4 +18,4 @@ echo '*************************************************************************'
 echo "You can use access the database in this app's db/development.sqlite3 file"
 echo 'by using SQLite database browser.'
 echo '*********************************'
-cd /home/vagrant/shared/school && rails s -b 0.0.0.0
+cd /home/vagrant/shared/school_sq && rails s -b 0.0.0.0
